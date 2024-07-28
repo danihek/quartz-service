@@ -6,11 +6,11 @@ cd quartz
 path="$(pwd)"
 echo "[INFO]: PATH: $path"
 
-# npm
-npm i
+# npm install
+sudo npm i
 
 # creating starting script in /usr/bin/
- cd ..
+cd ..
 echo "[INFO]: Creating starting script..."
 echo "#!/bin/bash" > quartz-start.sh
 echo "cd $path" >> quartz-start.sh
@@ -19,7 +19,6 @@ sudo chmod +x quartz-start.sh
 sudo cp quartz-start.sh /usr/bin/
 
 # install systemd service
-cd ..
 echo "[INFO]: Installing systemd service..."
 sudo cp quartz-server.service /etc/systemd/system/
 sudo systemctl enable quartz-server.service

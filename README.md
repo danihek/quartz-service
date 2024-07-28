@@ -15,7 +15,7 @@ cd quartz-service
 ./setup.sh
 ```
 
-#Uninstall
+# Uninstall
 ```
 ./uninstall.sh
 ```
